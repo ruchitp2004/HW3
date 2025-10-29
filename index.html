@@ -1,0 +1,57 @@
+<!--   Name: Ruchit Patel
+        Date: 10/29/2025
+        File: index.html
+        HW3 Creating an Interactive Dynamic Table 
+        Description: In this HTML file is the structure and layout of my page. It has a heading, a form where the used can 
+        enter values as their input for both X and Y axes and a Container div that displays the table. there are also links 
+        to the external CSS and javaScript file.
+-->
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+    
+    <h1>Interactive Dynamic Table</h1>
+    <hr>
+    <div class="container">
+        <form id="inputform" novalidate>
+        <div class="form">
+            <label>Minimum column value Y (between -50 to 50) :</label>
+            <input type="number" id="startY" placeholder="Enter value" min="-50" max="50" >
+        </div>
+
+        <div class="form">
+            <label>Maximum column value Y (between -50 to 50) :</label>
+            <input type="number" id="endY" placeholder="Enter value" min="-50" max="50" > 
+        </div>
+
+        <div class="form">
+            <label>Minimum column value X (between -50 to 50) :</label>
+            <input type="number" id="startX" placeholder="Enter value" min="-50" max="50" >
+        </div>
+
+        <div class="form">
+            <label>Maximum column value X (between -50 to 50) :</label>
+            <input type="number" id="endX" placeholder="Enter value" min="-50" max="50" >
+        </div>
+
+        
+        <button type="submit">Generate Table</button>
+    </form>
+    </div>
+
+    <div id="error-message"></div>
+    <div id="tableContainer" class="table-wrapper"></div>
+
+    <!-- Link JavaScript -->
+    <script src="js/table.js"></script>
+</body>
+</html>
